@@ -1,0 +1,14 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: #000000;
+}
+.logo span {
+    color: #2196F3;
+}
