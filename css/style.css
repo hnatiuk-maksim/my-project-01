@@ -162,8 +162,10 @@ body {
 .hero-title {
     padding-top: 200px;
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
 
-    min-width: 696px;
+    width: 696px;
 
     font-weight: 900;
     font-size: 44px;
