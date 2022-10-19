@@ -15,6 +15,8 @@
     --footer-back-color: #2F303A;
     --footer-address-color: color: rgba(255, 255, 255, 0.6);
     --logo-text-color: #000000;
+    --icon-fill-color: #AFB1B8;
+    --icon-fill-footer: rgba(255, 255, 255, 0.1);
 
 }
 
@@ -52,6 +54,7 @@ body {
 /*.link {
     text-decoration: none;
 }*/
+
 /*--------------header styles---------------*/
 .page-header {
     border-bottom: 1px solid #ECECEC;
@@ -124,6 +127,7 @@ body {
 /* Стилі контактів хедеру */
 .header-contacts {
     display: flex;
+    align-items: center;
     margin-left: auto;
     gap: 50px;    
 }
@@ -131,13 +135,14 @@ body {
     margin-left: 50px;
 } */
 .header-contacts .contacts {
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 
     font-weight: 500;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.02em; 
     text-decoration: none;
     color: var(--primary-text-color);
 }
@@ -145,13 +150,26 @@ body {
 .contacts:focus {
     color: var(--accent-color);
 }
+.header-contacts .item {
+    
+    
+}
+.icon-mail {
+    fill: currentColor;
+    margin-right: 10px;    
+}
+.icon-phone {
+    fill: currentColor;
+    margin-right: 10px;
+}
 /* Стилі секції ГЕРОЙ */
 .hero {
-        text-align: center;
+    padding: 200px 0;
+    text-align: center;
 }
 .overlay {
     height: 600px;
-    max-width: 1600px;
+    width: 1600px;
     margin-right: auto;
     margin-left: auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-overlay.jpg);
@@ -160,7 +178,6 @@ body {
     /* background-repeat: no-repeat; */
 }
 .hero-title {
-    padding-top: 200px;
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
@@ -180,8 +197,7 @@ body {
     height: 50px;
     border: none;
     border-radius: 4px;
-    margin-bottom: 200px;
-
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -199,6 +215,9 @@ body {
 /* Стилі секцій */
 .section {
     padding: 93px 0;
+}
+.section:nth-child(3) {
+    padding-top: 0;
 }
 /* Прихований заголовог */
 .visually-hidden {
@@ -227,7 +246,37 @@ body {
 .advantages {
     display: flex;
     gap: 30px;
+    
 }
+.advantages .item {
+    flex-basis: calc((100%-90px)/4);
+
+}
+/* .advantages .item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+} */
+/* .icon-details::before {
+    background-image: url(../images/icon-details.svg);
+} */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    
+    background-color: var(--section-comand-back-color);
+}
+
 
 .advantages .title {
     margin-bottom: 10px;
@@ -249,7 +298,11 @@ body {
 
   /* Стилі секції Наша команда */
 .workers {
+    /* margin-right: auto;
+    margin-left: auto; */
+    /* max-width: 1600px; */
     background-color: var(--section-comand-back-color);
+
 }
 .command {
     display: flex;
@@ -276,17 +329,77 @@ body {
     
 }
 .command .text {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     
 }
+.soc-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.soc-item {    
+    width: 44px;
+    height: 44px;
+}
+
+.soc-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    fill: var(--icon-fill-color);
+    
+}
+.soc-item-link:hover,
+.soc-item-link:focus {
+    background-color: var(--accent-color);
+    fill:var(--hero-title-color);
+}
+
+.clients-list {
+    display: flex;
+    gap: 30px;
+}
+.clients-list-item {
+    width: calc((100% - 150px) / 6);
+    height: 92px;
+}
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--icon-fill-color);
+    border-radius: 4px;
+    fill: var(--icon-fill-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+    border: 1px solid var(--accent-color);
+    fill: var(--accent-color);
+
+}
+
+
   /* Стилі футера */
 .footer-page {
     padding: 60px 0;
     background-color: var(--footer-back-color);
+}
+.footer-page .container {
+    display: flex;
+    
+    align-items: baseline;
+    
 }
 .footer-page .header-logo {
     display: inline-block;
@@ -325,6 +438,48 @@ body {
 .address .contacts:hover,
 .address .contacts:focus {
     color: var(--accent-color);
+}
+
+.soc-container {
+    /* display: flex; */
+    margin-left: 70px;
+
+}
+.soc-container .title {
+    margin-bottom: 20px;
+    
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--hero-title-color);
+}
+.soc-container .soc-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.soc-container .soc-item {
+    width: 44px;
+    height: 44px;
+}
+
+.soc-container .soc-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--icon-fill-footer);
+    fill: var(--hero-title-color);
+
+}
+
+.soc-item-link:hover,
+.soc-item-link:focus {
+    background-color: var(--accent-color);
+    fill: var(--hero-title-color);
 }
 /* Стилі для portfolio.html */
 .filter {
@@ -370,7 +525,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100%-60px)/3);
+    
+}
+.projects .item {
+    flex-basis: calc((100% - 60px) / 3);
 }
 .projects-border {
     padding: 20px 24px;
