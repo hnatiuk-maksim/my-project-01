@@ -11,6 +11,7 @@
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
+    
     <title>Webstudio</title>
 </head>
 <body>
@@ -47,9 +48,57 @@
         <!-- Секція герой -->
         <section class="hero overlay">
             <div class="container">
-            <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="hero-btn" type="button">Замовити послугу</button>
-        </div>
+                <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+                <button class="hero-btn" type="button" data-open-modal>Замовити послугу</button>
+            </div>
+            <div class="backdrop is-hidden" data-backdrop>
+                <div class="modal">
+                    <button class="close-modal" data-close-modal>
+                        <svg class="icon-close" width="18" height="18">
+                            <use href="./images/symbol-defs.svg#icon-close-x"></use>
+                        </svg>
+                    </button>
+                    <h3 class="modal-title">Залиште свої дані, ми вам передзвонимо</h3>
+                    <form class="js-speaker-form user-form">
+                        <div class="form-field">
+                            <label for="name" class="form-label">Ім'я</label>
+                            <input type="text" name="user-name" id="name" class="form-input">
+                            <svg class="icon-input" width="18" height="18">
+                                <use href="./images/symbol-defs.svg#icon-person"></use>
+                            </svg>
+                        </div>
+                        <div class="form-field">
+                            <label for="tel" class="form-label">Телефон</label>
+                            <input type="tel" name="tel" id="tel" class="form-input">
+                            <svg class="icon-input" width="18" height="18">
+                                <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+                            </svg>
+                        </div>
+                        <div class="form-field">
+                            <label for="email" class="form-label">Пошта</label>
+                            <input type="email" name="email" id="email" class="form-input">
+                            <svg class="icon-input" width="18" height="18">
+                                <use href="./images/symbol-defs.svg#icon-email-black"></use>
+                            </svg>
+                        </div>
+                        <div class="form-field">
+                            <label for="coment" class="form-label">Коментар</label>
+                            <textarea name="coment" id="coment" class="form-coment" placeholder="Введіть текст"></textarea>
+                        </div>
+
+                        <div class="form-policy">
+                            <input type="checkbox" name="policy" id="policy" class="input-policy">
+                            <label for="policy" clas="text-policy">Погоджуюся з розсилкою та приймаю
+                                <a href="" class="policy-link">Умови договору</a>
+                            </label>
+                        </div>                  
+
+                        <button type="submit" class="modal-btn">Відправити</button>
+                    
+                    </form>
+                </div>
+            </div>
+            
         </section>
         <!-- Наші переваги -->
         <section class="section">
@@ -101,13 +150,28 @@
             <h2 class="section-title">Чим ми займаємося</h2>
             <ul class="task list">
                 <li class="item">
-                    <img src="./images/img-01.jpg" alt="Комп'ютерні технології" width="370" height="294">
+                    <div class="img-cover">
+                        <img src="./images/img-01.jpg" alt="Комп'ютерні технології" width="370" height="294">
+                            <div class="img-description">
+                                <h3 class="title">Десктопні додатки</h3>
+                            </div>
+                    </div>
                 </li>
                 <li class="item">
-                    <img src="./images/img-02.jpg" alt="Комп'ютерні технології" width="370" height="294">
+                    <div class="img-cover">
+                        <img src="./images/img-02.jpg" alt="Комп'ютерні технології" width="370" height="294">
+                        <div class="img-description">
+                            <h3 class="title">Мобільні додатки</h3>
+                        </div>
+                    </div>
                 </li>
                 <li class="item">
-                    <img src="./images/img-03.jpg" alt="Комп'ютерні технології" width="370" height="294">
+                    <div class="img-cover">
+                        <img src="./images/img-03.jpg" alt="Комп'ютерні технології" width="370" height="294">
+                        <div class="img-description">
+                            <h3 class="title">Дизайнерські рішення</h3>
+                        </div>
+                    </div>
                 </li>
             </ul>
             </div>
@@ -320,7 +384,7 @@
     </main>
     <!-- Футер сайту -->
     <footer class="footer-page">
-        <div class="container">
+    <div class="container">
         <div class="adress-container">
         <a href="./index.html" class="header-logo link"><span class="logo">Web</span>Studio</a>
         <address class="address">
@@ -372,8 +436,52 @@
                 </li>
             </ul>
         </div>
+        <div class="send-container">
+            <h3 class="title">Підпишіться на розсилку</h3>
+            <form class="js-speaker-form user-send">
+                <div class="send-form">
+                    <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="send-input"
+                    placeholder="E-mail">
+                    <button type="submit" class="send-btn">Підписатися</button>
+                </div>
         </div>
+    </div>
                 
-    </footer>    
+    </footer>   
+    <script>
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+        }
+
+        function logBackdropClick() {
+            console.log("Це клік в бекдроп");
+        }
+    </script>
+    <script>
+        (() => {
+                document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`),
+                    );
+                });
+            })();
+    </script>
 </body>
 </html>
