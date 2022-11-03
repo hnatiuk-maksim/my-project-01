@@ -1,0 +1,45 @@
+@import "./utils/variables";
+@import "./base/normalaize";
+@import "./base/common";
+@import "./utils/placeholder";
+
+@import "./components/page-header";
+@import "./components/main-nav";
+@import "./components/header-navigation";
+
+@import "./components/header-logo";
+
+@import "./components/header-list";
+@import "./components/header-link";
+@import "./components/header-contacts";
+
+@import "./components/hero/hero";
+@import "./components/hero/overlay";
+@import "./components/hero/hero-container";
+@import "./components/hero/hero-title";
+@import "./components/hero/hero-btn";
+
+@import "./components/modal/backdrop";
+@import "./components/modal/modal";
+@import "./components/modal/icon-close";
+@import "./components/modal/modal-title";
+
+@import "./components/modal-form/form";
+@import "./components/modal-form/form-input";
+@import "./components/modal-form/form-comment";
+@import "./components/modal-form/checkbox-policy";
+@import "./components/modal-form/form-button";
+
+@import "./base/section";
+
+@import "./components/advantages/advantages-container";
+@import "./components/advantages/advantages-list";
+
+@import "./components/tasks/tasks-container";
+
+@import "./components/team/team-container";
+@import "./components/team/team-card";
+@import "./components/team/team-soc";
+
+@import "./components/clients/clients-container";
+@import "./components/clients/clients-card";

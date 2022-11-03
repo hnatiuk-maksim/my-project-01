@@ -1,0 +1,29 @@
+.soc-list {
+    @extend %list;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.soc-item {    
+    width: 44px;
+    height: 44px;
+}
+
+.soc-item-link {
+    @extend %link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    fill: $icon-fill-color;
+    
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        fill: $hero-title-color;
+    }
+}

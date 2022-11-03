@@ -1,0 +1,7 @@
+.team-section {
+    background-color: $section-comand-back-color;
+
+}
+.team-container {
+    @extend %container;
+}

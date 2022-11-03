@@ -1,0 +1,38 @@
+.form-field {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    margin-bottom: 4px;
+
+    text-align: start;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;    
+    color: $form-label-color;
+}
+
+.form-input {
+    height: 40px;
+
+    padding-left: 42px;
+    border: 1px solid $form-border-color;
+    border-radius: 4px;
+
+    &:focus {
+        outline: 1px solid $form-outline-accent;
+    }
+    &:focus + .icon-input {
+        fill: $input-icon-accent;
+    }
+}
+
+.icon-input {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+}

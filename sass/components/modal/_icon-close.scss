@@ -1,0 +1,21 @@
+.close-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: auto;
+
+    background-color: $icon-close-back;
+    border: 1px solid $icon-close-border;
+
+    &:hover,
+    &:focus {
+        fill: $icon-close-accent;
+    }
+}
+
