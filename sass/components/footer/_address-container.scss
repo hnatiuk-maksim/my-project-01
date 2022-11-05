@@ -1,0 +1,52 @@
+.address-container {
+    text-align: center;
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    text-decoration: none;
+
+    color: $hero-title-color;
+}
+.footer-list {
+    @extend %list;
+
+    margin-bottom: 60px;
+}
+.footer-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.address {
+    font-style: normal;    
+}
+.address-link {
+    @extend %link;
+    display: inline-block;
+
+    line-height: 1.71;
+    color: $hero-title-color;
+}
+.address-link:hover,
+.address-link:focus {
+    color: $accent-color;
+}
+
+.footer-contacts {
+    @extend %link;
+
+    display: inline-block;
+
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $footer-address-color;
+}
+.footer-contacts:hover,
+.footer-contacts:focus {
+    color: var(--accent-color);
+}

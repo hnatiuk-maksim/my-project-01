@@ -1,0 +1,16 @@
+.footer-page {
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 60px 0;
+    background-color: $footer-back-color;
+}
+.footer-container {
+    @extend %container;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
