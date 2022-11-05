@@ -1,12 +1,13 @@
 .overlay {
-    height: 600px;
+    height: 400px;
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
     
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
                         url(../images/Img-overlay.jpg);
-    background-color: $hero-back-color;
-    
-    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $hero-back-color;    
 }

@@ -2,9 +2,10 @@
     @extend %list;
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 .clients-item {
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 30px) / 2);
     height: 92px;
 }
 .clients-link {

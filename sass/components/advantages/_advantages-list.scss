@@ -1,12 +1,17 @@
 .advantages-list {
     @extend %list;
-    display: flex;
-    gap: 30px;
+    // display: flex;
+    // gap: 30px;
 }
 
 .advantages-item {
     flex-basis: calc((100% - 90px) / 4);
+    margin-bottom: 30px;
 }
+.advantages-item:last-child {
+    margin-bottom: 0;
+}
+
 .icon-container {
     display: flex;
     align-items: center;
@@ -27,6 +32,7 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    text-align: center;
     color: $title-text-color;
 }
 .advantages-text {
