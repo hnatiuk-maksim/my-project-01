@@ -293,6 +293,16 @@ body {
 .main-nav {
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .main-nav {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1139px) {
+  .main-nav {
+    width: 768px;
+  }
+}
 
 .header-navigation {
   display: flex;
@@ -315,10 +325,22 @@ body {
   color: #2196F3;
 }
 
-.header-list {
-  display: flex;
-  gap: 50px;
-  margin-left: 93px;
+@media screen and (max-width: 767px) {
+  .header-list {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-list {
+    display: flex;
+    gap: 50px;
+    margin-left: 87px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .header-list {
+    margin-left: 93px;
+  }
 }
 
 .header-link {
@@ -353,7 +375,7 @@ body {
 
 .header-contacts {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   margin-left: auto;
 }
 

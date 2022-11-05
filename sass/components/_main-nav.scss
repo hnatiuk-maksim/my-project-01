@@ -1,4 +1,12 @@
 .main-nav {
     @extend %container;
     display: flex;
+
+    @media screen and (max-width: 767px) {
+        width: 450px;       
+    }
+
+    @media screen and (max-width: 1139px) {
+        width: 768px;       
+    }
 }

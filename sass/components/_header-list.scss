@@ -1,8 +1,26 @@
 .header-list {
     @extend %list;
     
-    display: flex;
-    gap: 50px;
+    // display: flex;
+    // gap: 50px;
     
-    margin-left: 93px;
+    // margin-left: 93px;
+
+    @media screen and (max-width: 767px) {
+        display: none;       
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 50px;
+
+        margin-left: 87px;
+    }
+    @media screen and (min-width: 1140px) {
+    
+
+        margin-left: 93px;
+    }
 }
+
+
