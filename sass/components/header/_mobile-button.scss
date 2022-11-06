@@ -1,7 +1,13 @@
 .mobile-btn {
     margin: 0;
     padding: 0;
-    z-index: 9;
+    background-color: transparent;
+    border: 0;
+    z-index: 2;
+
+    @media screen and (min-width: 768px) {
+        display: none;        
+    }
 }
 
 .mobile-btn .icon-cross {

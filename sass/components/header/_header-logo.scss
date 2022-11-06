@@ -1,4 +1,5 @@
 .header-logo {
+    @extend %link;
     display: block;
     
     font-family: 'Raleway';

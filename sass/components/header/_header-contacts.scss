@@ -1,6 +1,10 @@
 .header-contacts {
     display: none;
     position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
     @extend %list;
 
     &.is-open {
