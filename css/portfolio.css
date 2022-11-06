@@ -494,6 +494,7 @@ body {
   left: 0;
   width: 100%;
   padding: 48px 40px;
+  z-index: 1;
   background-color: #fff;
 }
 .mobile-navigation.is-open {
@@ -633,6 +634,7 @@ body {
 
 .photo {
   width: 100%;
+  z-index: 0;
 }
 
 .photo-overlay {
