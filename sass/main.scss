@@ -3,15 +3,18 @@
 @import "./base/common";
 @import "./utils/placeholder";
 
-@import "./components/page-header";
-@import "./components/main-nav";
-@import "./components/header-navigation";
+@import "./components/header/page-header";
+@import "./components/header/main-nav";
+@import "./components/header/header-navigation";
 
-@import "./components/header-logo";
+@import "./components/header/header-logo";
 
-@import "./components/header-list";
-@import "./components/header-link";
-@import "./components/header-contacts";
+@import "./components/header/header-list";
+@import "./components/header/header-item";
+@import "./components/header/header-link";
+@import "./components/header/header-contacts";
+
+@import "./components/header/mobile-button";
 
 @import "./components/hero/hero";
 @import "./components/hero/overlay";

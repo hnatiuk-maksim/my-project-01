@@ -20,13 +20,13 @@
         <div class="main-nav">
         <nav class="header-navigation">
             <a href="./index.html" class="header-logo link"><span class="logo">Web</span>Studio</a>
-            <ul class="header-list">
+            <ul class="header-list" data-menu>
                 <li class="header-item"><a href="" class="header-link current">Студія</a></li>
                 <li class="header-item"><a href="./portfolio.html" class="header-link">Портфоліо</a></li>
                 <li class="header-item"><a href="" class="header-link">Контакти</a></li>
             </ul>
         </nav>
-        <ul class="header-contacts">
+        <ul class="header-contacts" data-menu>
             <li class="item">
                 <a href="mailto:maximgnat24@gmail.com" class="contacts">
                     <svg class="icon-mail" width="16" height="12">
@@ -42,6 +42,13 @@
                     +38 068 111 50 97</a>
             </li>
         </ul>
+        <button type="button" class="mobile-btn" data-menu-button>
+            <svg width="40" height="40" aria-label="Mobile menu">
+                
+                <use class="icon-cross" href="./images/symbol-defs.svg#icon-close_40px"></use>
+                <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu_40px"></use>
+            </svg>
+        </button>
         </div>
     </header>
     <main class="main">
@@ -480,6 +487,22 @@
                     );
                 });
             })();
+    </script>
+    <script>
+        (() => {
+  const menuBtnRef = document.querySelector("[data-menu-button]");
+  const mobileMenuRef = document.querySelector("[data-menu]");
+
+  menuBtnRef.addEventListener("click", () => {
+    const expanded =
+      menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+    menuBtnRef.classList.toggle("is-open");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+    mobileMenuRef.classList.toggle("is-open");
+  });
+})();
     </script>
 </body>
 </html>

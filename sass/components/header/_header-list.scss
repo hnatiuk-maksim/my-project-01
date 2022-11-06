@@ -1,14 +1,29 @@
 .header-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+
+    &.is-open {
+        display: block;
+    }
+
     @extend %list;
+
+    padding-top: 48px;
+    padding-left: 40px;
     
     // display: flex;
     // gap: 50px;
     
     // margin-left: 93px;
 
-    @media screen and (max-width: 767px) {
-        display: none;       
-    }
+    // @media screen and (max-width: 767px) {
+    //     display: none;       
+    // }
 
     @media screen and (min-width: 768px) {
         display: flex;

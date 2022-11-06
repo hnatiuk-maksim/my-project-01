@@ -1,0 +1,16 @@
+.mobile-btn {
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+}
+
+.mobile-btn .icon-cross {
+    display: none;
+}
+
+.mobile-btn.is-open .icon-cross {
+    display: block;
+}
+.mobile-btn.is-open .icon-menu {
+    display: none;
+}

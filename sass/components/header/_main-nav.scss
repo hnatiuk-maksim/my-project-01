@@ -1,0 +1,8 @@
+.main-nav {
+    position: relative;
+    
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    
+}
