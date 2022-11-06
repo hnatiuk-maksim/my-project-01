@@ -359,7 +359,7 @@ body {
     margin-left: 87px;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .header-list {
     margin-left: 93px;
   }
@@ -395,10 +395,10 @@ body {
   background-color: #2196F3;
 }
 
-.header-contacts {
-  display: flex;
-  gap: 30px;
-  margin-left: auto;
+@media screen and (max-width: 767px) {
+  .header-contacts {
+    display: none;
+  }
 }
 
 .header-contacts .contacts {
